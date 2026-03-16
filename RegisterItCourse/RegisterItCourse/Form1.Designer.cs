@@ -58,13 +58,18 @@
             this.dudMaGiamGia = new System.Windows.Forms.DomainUpDown();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numThoiGian)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -97,11 +102,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnXuatFile);
+            this.tabPage2.Controls.Add(this.btnXoa);
+            this.tabPage2.Controls.Add(this.dgvDanhSach);
             this.tabPage2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(10, 48);
+            this.tabPage2.Location = new System.Drawing.Point(10, 62);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1882, 1125);
+            this.tabPage2.Size = new System.Drawing.Size(2268, 837);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách học viên";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -399,6 +407,7 @@
             this.btnDangKy.TabIndex = 1;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // btnLamMoi
             // 
@@ -410,6 +419,35 @@
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             // 
+            // dgvDanhSach
+            // 
+            this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvDanhSach.Location = new System.Drawing.Point(3, 3);
+            this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.RowHeadersWidth = 102;
+            this.dgvDanhSach.RowTemplate.Height = 40;
+            this.dgvDanhSach.Size = new System.Drawing.Size(2262, 603);
+            this.dgvDanhSach.TabIndex = 0;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(554, 657);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(335, 139);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnXuatFile
+            // 
+            this.btnXuatFile.Location = new System.Drawing.Point(1145, 657);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(335, 139);
+            this.btnXuatFile.TabIndex = 1;
+            this.btnXuatFile.Text = "Xuất file";
+            this.btnXuatFile.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -420,6 +458,7 @@
             this.Text = "Quản lý Đăng ký Khóa học IT";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -429,6 +468,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numThoiGian)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,6 +505,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboNganhHoc;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnXuatFile;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.DataGridView dgvDanhSach;
     }
 }
 
