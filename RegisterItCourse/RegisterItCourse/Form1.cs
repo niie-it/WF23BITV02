@@ -74,5 +74,10 @@ namespace RegisterItCourse
             MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             tabControl1.SelectedTab = tabPage2; // Chuyển sang tab danh sách sau khi đăng ký thành công
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            dgvDanhSach.Rows.Clear();
+        }
     }
 }
