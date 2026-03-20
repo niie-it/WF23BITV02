@@ -69,5 +69,48 @@ namespace MyWordPad
                 }
             }
         }
+
+        private void MenuSelectFont_Click(object sender, EventArgs e)
+        {
+            var fontDialog = new FontDialog();
+            fontDialog.ShowColor = true;
+            fontDialog.ShowApply = true;
+            fontDialog.Apply += new EventHandler(XuLyApplyFont);
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.SelectionFont = fontDialog.Font;
+                richTextBox1.SelectionColor = fontDialog.Color;
+            }
+        }
+
+        private void XuLyApplyFont(object sender, EventArgs e)
+        {
+            var fontDialog = sender as FontDialog;
+            richTextBox1.SelectionFont = fontDialog.Font;
+            richTextBox1.SelectionColor = fontDialog.Color;
+        }
+
+        private void fontColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.SelectionColor = colorDialog.Color;
+            }
+        }
+
+        private void pageColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
