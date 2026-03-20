@@ -110,7 +110,35 @@ namespace MyWordPad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void boldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //lấy style của font hiện tại
+            FontStyle style = richTextBox1.SelectionFont.Style;
+            if (richTextBox1.SelectionFont.Bold)
+            {
+                style &= ~FontStyle.Bold; //bỏ bold
+            }
+            else
+            {
+                style |= FontStyle.Bold; //thêm bold
+            }
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, style);
+        }
+
+        private void insertImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            ofd.Filter = "Image files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var image = Image.FromFile(ofd.FileName);
+                Clipboard.SetImage(image);
+                richTextBox1.Paste();
+                Clipboard.Clear();//tùy chọn
+            }
         }
     }
 }

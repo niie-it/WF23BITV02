@@ -109,7 +109,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1713, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(1713, 52);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -205,7 +205,7 @@
             this.toolStripComboBox1,
             this.toolStripDropDownButton1,
             this.toolStripSeparator2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 49);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 52);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1713, 51);
             this.toolStrip1.TabIndex = 1;
@@ -288,9 +288,9 @@
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 100);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 103);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1713, 914);
+            this.richTextBox1.Size = new System.Drawing.Size(1713, 911);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -336,6 +336,7 @@
             this.boldToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.boldToolStripMenuItem.Size = new System.Drawing.Size(448, 54);
             this.boldToolStripMenuItem.Text = "Bold";
+            this.boldToolStripMenuItem.Click += new System.EventHandler(this.boldToolStripMenuItem_Click);
             // 
             // italicToolStripMenuItem
             // 
@@ -445,6 +446,7 @@
             this.insertImageToolStripMenuItem.Name = "insertImageToolStripMenuItem";
             this.insertImageToolStripMenuItem.Size = new System.Drawing.Size(448, 54);
             this.insertImageToolStripMenuItem.Text = "Insert Image";
+            this.insertImageToolStripMenuItem.Click += new System.EventHandler(this.insertImageToolStripMenuItem_Click);
             // 
             // paragraphToolStripMenuItem
             // 
