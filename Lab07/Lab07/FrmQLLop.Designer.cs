@@ -30,21 +30,21 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lvLop = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.cboListType = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
-            this.txtTenLop = new System.Windows.Forms.TextBox();
-            this.txtSiSo = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lvLop = new System.Windows.Forms.ListView();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSiSo = new System.Windows.Forms.TextBox();
+            this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -100,37 +100,6 @@
             this.splitContainer2.SplitterDistance = 154;
             this.splitContainer2.TabIndex = 0;
             // 
-            // lvLop
-            // 
-            this.lvLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvLop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvLop.HideSelection = false;
-            this.lvLop.Location = new System.Drawing.Point(0, 0);
-            this.lvLop.Name = "lvLop";
-            this.lvLop.Size = new System.Drawing.Size(1530, 549);
-            this.lvLop.TabIndex = 0;
-            this.lvLop.UseCompatibleStateImageBehavior = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Danh sách lớp";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(813, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 48);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Kiểu hiển thị";
-            // 
             // cboListType
             // 
             this.cboListType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -146,86 +115,50 @@
             this.cboListType.Name = "cboListType";
             this.cboListType.Size = new System.Drawing.Size(392, 56);
             this.cboListType.TabIndex = 1;
+            this.cboListType.SelectedIndexChanged += new System.EventHandler(this.cboListType_SelectedIndexChanged);
             // 
-            // groupBox1
+            // label2
             // 
-            this.groupBox1.Controls.Add(this.txtSiSo);
-            this.groupBox1.Controls.Add(this.txtTenLop);
-            this.groupBox1.Controls.Add(this.txtMaLop);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(44, 43);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(693, 298);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin lớp";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(813, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(240, 48);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Kiểu hiển thị";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 48);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mã lớp";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(271, 48);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Danh sách lớp";
             // 
-            // label4
+            // lvLop
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 151);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 48);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên lớp";
+            this.lvLop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvLop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvLop.HideSelection = false;
+            this.lvLop.Location = new System.Drawing.Point(0, 0);
+            this.lvLop.Name = "lvLop";
+            this.lvLop.Size = new System.Drawing.Size(1530, 549);
+            this.lvLop.TabIndex = 0;
+            this.lvLop.UseCompatibleStateImageBehavior = false;
+            this.lvLop.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lvLop_ItemSelectionChanged);
+            this.lvLop.SelectedIndexChanged += new System.EventHandler(this.lvLop_SelectedIndexChanged);
             // 
-            // label5
+            // btnThoat
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 48);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Sỉ số";
-            // 
-            // txtMaLop
-            // 
-            this.txtMaLop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLop.Location = new System.Drawing.Point(248, 76);
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(386, 56);
-            this.txtMaLop.TabIndex = 1;
-            // 
-            // txtTenLop
-            // 
-            this.txtTenLop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLop.Location = new System.Drawing.Point(248, 147);
-            this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(386, 56);
-            this.txtTenLop.TabIndex = 2;
-            // 
-            // txtSiSo
-            // 
-            this.txtSiSo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSiSo.Location = new System.Drawing.Point(248, 218);
-            this.txtSiSo.Name = "txtSiSo";
-            this.txtSiSo.Size = new System.Drawing.Size(386, 56);
-            this.txtSiSo.TabIndex = 3;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(863, 65);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(270, 119);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(1216, 220);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(270, 119);
+            this.btnThoat.TabIndex = 1;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
@@ -247,15 +180,86 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // btnThoat
+            // btnThem
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(1216, 220);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(270, 119);
-            this.btnThoat.TabIndex = 1;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(863, 65);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(270, 119);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtSiSo);
+            this.groupBox1.Controls.Add(this.txtTenLop);
+            this.groupBox1.Controls.Add(this.txtMaLop);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(44, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(693, 298);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin lớp";
+            // 
+            // txtSiSo
+            // 
+            this.txtSiSo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSiSo.Location = new System.Drawing.Point(248, 218);
+            this.txtSiSo.Name = "txtSiSo";
+            this.txtSiSo.Size = new System.Drawing.Size(386, 56);
+            this.txtSiSo.TabIndex = 3;
+            // 
+            // txtTenLop
+            // 
+            this.txtTenLop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLop.Location = new System.Drawing.Point(248, 147);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(386, 56);
+            this.txtTenLop.TabIndex = 2;
+            // 
+            // txtMaLop
+            // 
+            this.txtMaLop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(248, 76);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(386, 56);
+            this.txtMaLop.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(43, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 48);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Sỉ số";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(43, 151);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 48);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tên lớp";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 48);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Mã lớp";
             // 
             // FrmQLLop
             // 
@@ -265,6 +269,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmQLLop";
             this.Text = "Quản lý lớp";
+            this.Load += new System.EventHandler(this.FrmQLLop_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
