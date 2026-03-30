@@ -86,4 +86,27 @@ namespace Lab07
                 return;
             }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            var maLop = txtMaLop.Text.Trim();
+            if (maLop.Length > 0)
+            {
+                var result = MessageBox.Show($"Bạn có chắc muốn xóa lớp {maLop} này?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    var sql = $"DELETE FROM Lop WHERE MaLop='{maLop}'";
+                    if (DataProvider.TruyVan_XuLy(sql))
+                    {
+                        MessageBox.Show("Xóa lớp thành công");
+                        layDanhSachLop();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi khi xóa lớp");
+                    }
+                }
+            }
+        }
     }
+}

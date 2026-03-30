@@ -16,5 +16,18 @@ namespace Lab07
         {
             InitializeComponent();
         }
+
+        private void mnuMoFormQLLop(object sender, EventArgs e)
+        {
+            var form = new FrmQLLop();
+            form.MdiParent = this;
+            form.Show();
+            lblStatus.Text = "Đã mở form quản lý lớp học.";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDongHo.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
     }
 }
