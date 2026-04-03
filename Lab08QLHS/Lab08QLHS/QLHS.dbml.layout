@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLHS">
+  <DataContextMoniker Name="/QLHSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3616b0a1-7284-4fd3-9498-9f5327881291" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QLHSDataContext/HocSinh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96e96b82-cf5f-47de-b857-2af6124fa95c" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f31637b-8e31-4994-b9ed-6046452f3d79" absoluteBounds="0.75, 3.75, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/QLHSDataContext/NguoiDung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebbd3645-4c95-4015-8e53-3cd6ea941840" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24757a3f-854f-4512-b83c-26ca986c1662" absoluteBounds="0.75, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QLHSDataContext/Lop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d8b8f06-bc83-4c0e-99a1-6c34c81ee628" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.94314697265625); (3.5 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLHSDataContext/Lop/Lop_HocSinh" />
+      <nodes>
+        <classShapeMoniker Id="24757a3f-854f-4512-b83c-26ca986c1662" />
+        <classShapeMoniker Id="3616b0a1-7284-4fd3-9498-9f5327881291" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
